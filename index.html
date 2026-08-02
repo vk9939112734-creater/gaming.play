@@ -159,6 +159,8 @@
   <div class="wrap">
     <div class="canvas-container">
       <canvas id="game" width="800" height="400"></canvas>
+
+        <audio id="myAudio" src="audiogame(128k).mp3" autoplay=""></audio>
     
     <div class="panel">
       <h1>Snake (Game)</h1>
@@ -193,6 +195,11 @@
   const box = 20; 
   const cols = canvas.width / box; 
   const rows = canvas.height / box; 
+  const audio = document.getElementById('myAudio');
+
+   function playAudio() {
+        audio.play();
+    }
 
   let snake;
   let direction;
